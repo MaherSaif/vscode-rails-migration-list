@@ -2,26 +2,48 @@
     "name": "rails-migration-list",
     "displayName": "rails-migration-list",
     "description": "List rails migrations files",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "MaherSaif",
     "engines": {
         "vscode": "^1.12.0"
     },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/MaherSaif/vscode-rails-migration-list"
+    },
+    "homepage": "https://github.com/MaherSaif/vscode-rails-migration-list",
+    "galleryBanner": {
+        "color": "#c52f24",
+        "theme": "dark"
+    },
     "categories": [
         "Other"
+    ],
+    "keywords": [
+        "Ruby on Rails",
+        "Migrations"
     ],
     "activationEvents": [
         "onCommand:extension.rails-migrations-list"
     ],
     "main": "./out/src/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.rails-migrations-list",
-            "title": "Rails Migrations List"
-        }]
+        "commands": [
+            {
+                "command": "extension.rails-migrations-list",
+                "title": "Rails Migrations List"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.rails-migrations-list",
+                "key": "cmd+shift+m"
+            }
+        ]
     },
     "scripts": {
         "postinstall": "node ./node_modules/vscode/bin/install",
+        "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
         "test": "node ./node_modules/vscode/bin/test"
     },
     "devDependencies": {
