@@ -1,3 +1,3 @@
-# rails-migration-list README
+# README
 
 This extentions lists db migrations in a rails project

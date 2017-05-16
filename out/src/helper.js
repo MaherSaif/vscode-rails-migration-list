@@ -16,7 +16,8 @@ var RailsHelper = (function () {
         vscode.workspace.findFiles(cur.toString(), null).then(function (res) {
             res.forEach(function (i) {
                 var file_path = vscode.workspace.asRelativePath(i);
-                var file_name = file_path.replace(/db\/migrate\/[0-9]{14}_(.*)\.rb/, '$1');
+                // var file_name = file_path.replace(/db\/migrate\/[0-9]{14}_(.*)\.rb/, '$1');
+                var file_name = file_path.replace(/db\/migrate\//, '$1');
 
                 _self.items.push(file_name);
             });
